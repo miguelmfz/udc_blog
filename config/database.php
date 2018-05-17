@@ -1,6 +1,6 @@
 <?php 
 return array(
-    "dirver"    =>"mysql",
+    "driver"    =>"mysql",
     "host"      =>"localhost",
     "user"      =>"root",
     "pass"      =>"",

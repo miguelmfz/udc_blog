@@ -3,7 +3,7 @@
         private $table,$db,$connection;
 
         public function __construct(){
-            $this->tablet=(string) $table;
+            $this->table=(string) $table;
             
             require_once "connection.php";
             $this->connection = new Connection();
