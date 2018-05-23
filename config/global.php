@@ -1,4 +1,4 @@
 <?php 
-define("defaultController","default");
+define("defaultController","blog");
 define("ActionDefault","index");
 ?>

@@ -1,10 +1,10 @@
 <?php 
     function loadController($controller){
         $controlador=ucwords($controller).'controller';
-        $strFileController='controller/'.$controlador.'.php';
+        $strFileController='controllers/'.$controlador.'.php';
 
         if(is_file($strFileController)){
-            $strFileController='controller/'.ucwords(defaultController).'Controller.php';
+            $strFileController='controllers/'.ucwords(defaultController).'Controller.php';
         }
 
 
@@ -15,7 +15,7 @@
 
     function loadAction($controllerObject, $action){
         $localAction=$action;
-        $controllerObject->$localAction;
+        $controllerObject->$localAction();
     }
 
     function launchAction($controllerObject){

@@ -1,6 +1,6 @@
 <?php
 
-public class BlogModel
+ class BlogModel extends Model
 {
 	private $id;
 	private $codigo;
@@ -13,17 +13,10 @@ public class BlogModel
 	private $idCategoria;
 
 
-	public function __construct($id, $codigo, $titulo, $intro, $fechaPublicacion, $publicar, $estado, $idUsuario, $idCategoria)
+	public function __construct($table)
 	{
-		$this->id = $id;
-		$this->codigo = $codigo;
-		$this->titulo = $titulo;
-		$this->intro = $intro;
-		$this->fechaPublicacion = $fechaPublicacion;
-		$this->publicar = $publicar;
-		$this->estado = $estado;
-		$this->idUsuario = $idUsuario;
-		$this->idCategoria = $idCategoria;
+        $table='blog';
+        parent::__construct($table);
 	}
 
     /**
@@ -201,9 +194,26 @@ public class BlogModel
      */
     public function setIdCategoria($idCategoria)
     {
-        $this->idCategoria = $idCategoria;
-
+        $this->idCategoria = $idCategoria;  
         return $this;
     }
+
+    public function save(){
+        $query="INSERT INTO 
+                blog(id,codigo,titulo,intro,fechaPublicacion,publicar,estado,idUsuario,idCategoria) 
+                values( NULL,
+                        '$this->codigo',
+                        '$this->titulo',
+                        '$intro',
+                        '$fechaPublicacion',
+                        '$this->publicar',
+                        '$this->estado',
+                        '$this->idUsuario',
+                        '$this->idCategoria');";
+        $save=$this->db()->query($query);
+        return $query;
+                        
+    }
 }
+
 ?>

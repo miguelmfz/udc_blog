@@ -14,7 +14,7 @@
 
         require_once'core/defaultView.php';
         $helper= new defaultView();
-        require_once 'view'.$vista."View.php";
+        require_once 'view/'.$vista."View.php";
     }
     public function redirect($controlador=defaultController,$action=ActionDefault){
         header("Location:index.php?controller=".$controlador."&action=".$action);
