@@ -1,6 +1,10 @@
 <?php
 
+<<<<<<< HEAD:models/BlogModel.php
+ class BlogModel extends Model
+=======
 class BlogModel
+>>>>>>> 513d9a719bb50b6ca39b2c68ddc10625cc4f3f1e:core/models/BlogModel.php
 {
 	private $id;
 	private $codigo;

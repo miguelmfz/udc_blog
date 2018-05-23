@@ -1,5 +1,5 @@
 <?php
-public class EnlaceModel
+class EnlaceModel
 {
 	private $id;
 	private $idBlog;

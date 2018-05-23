@@ -1,5 +1,5 @@
 <?php
-public class UsuarioModel
+class UsuarioModel
 {
 	private $id;
 	private $nombre;

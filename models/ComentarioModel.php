@@ -1,5 +1,5 @@
 <?php
-public class ComentarioModel
+class ComentarioModel
 {
 	private $id;
 	private $comentario;

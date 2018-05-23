@@ -1,5 +1,5 @@
 <?php
-public class CategoriaModel
+class CategoriaModel
 {
 	private $id;
 	private $nombre;
