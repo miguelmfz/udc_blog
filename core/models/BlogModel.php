@@ -1,6 +1,6 @@
 <?php
 
-public class BlogModel
+class BlogModel
 {
 	private $id;
 	private $codigo;

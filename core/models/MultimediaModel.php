@@ -1,5 +1,5 @@
 <?php
-public class MultimediaModel
+class MultimediaModel
 {
 	private $id;
 	private $idBlog;

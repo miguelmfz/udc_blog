@@ -1,5 +1,5 @@
 <?php
-public class CalificacionModel
+class CalificacionModel
 {
 	private $id;
 	private $tipo;
