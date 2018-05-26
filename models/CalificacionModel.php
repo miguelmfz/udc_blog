@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD:models/CalificacionModel.php
- class CalificacionModel
-=======
 class CalificacionModel
->>>>>>> 513d9a719bb50b6ca39b2c68ddc10625cc4f3f1e:core/models/CalificacionModel.php
 {
 	private $id;
 	private $tipo;

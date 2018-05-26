@@ -4,7 +4,7 @@ return array(
     "host"      =>"localhost",
     "user"      =>"root",
     "pass"      =>"",
-    "database"  =>"",
+    "database"  =>"udc_blog",
     "charset"   =>"utf8"
 );
 ?>

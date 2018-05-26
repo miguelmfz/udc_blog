@@ -14,9 +14,12 @@ class Connection{
     }
 
     public function connect(){
+        
         if($this->driver=="mysql" || $this->driver==null){
             $con= new mysqli($this->host,$this->user,$this->pass,$this->database);
             $con->query("SET NAMES '$this->charset'");
+        }else{
+            
         }
         return $con;
     }

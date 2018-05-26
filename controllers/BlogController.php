@@ -1,9 +1,12 @@
 <?php 
     class  blogController extends defaultController{
-        public function __construct(){}
-
+        public function __construct(){
+            parent::__construct();
+        }
         public function index(){
-            $datos=array(1,2,3,4,5,6,7,8,9);
+            $blog= new BlogModel();
+            $bestBlogs=$blog->getAll();
+            $datos=array("bestBlogs"=>$bestBlogs,"content"=>"header.php");
             $this->view('index',$datos);
         }
     }

@@ -1,9 +1,9 @@
 <?php 
  class defaultController{
-     public function __contruct(){
+     public function __construct(){
          require_once'dataset.php';
          require_once'model.php';
-            foreach(glob("model/*.php") as $file){
+            foreach(glob("models/*.php") as $file){
                 require_once $file;
             }
         }

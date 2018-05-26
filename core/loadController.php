@@ -6,8 +6,6 @@
         if(is_file($strFileController)){
             $strFileController='controllers/'.ucwords(defaultController).'Controller.php';
         }
-
-
         require_once $strFileController;
         $controllerObject = new $controlador();
         return $controllerObject;

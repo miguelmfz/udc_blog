@@ -3,7 +3,6 @@ require_once 'config/global.php';
 
 require_once 'core/defaultController.php';
 
-
 require_once 'core/loadController.php';
 
 if(isset($_GET["controller"])){

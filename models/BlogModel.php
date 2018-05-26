@@ -1,6 +1,6 @@
 <?php
 
-class BlogModel
+class BlogModel extends Model
 {
 	private $id;
 	private $codigo;
@@ -13,7 +13,7 @@ class BlogModel
 	private $idCategoria;
 
 
-	public function __construct($table)
+	public function __construct()
 	{
         $table='blog';
         parent::__construct($table);

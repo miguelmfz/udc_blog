@@ -2,9 +2,8 @@
     class DataSet{
         private $table,$db,$connection;
 
-        public function __construct(){
+        public function __construct($table){
             $this->table=(string) $table;
-            
             require_once "connection.php";
             $this->connection = new Connection();
             $this->db=$this->connection->connect();
@@ -16,9 +15,10 @@
             return $this->db;
         }
         public function resultSet($query){
-            $rs;
+            $rs=null;
             if($query->num_rows>1){
                 while($row=$query->fetch_object()){
+
                     $rs[]=$row;
                 }
             }else{

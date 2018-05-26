@@ -12,6 +12,8 @@
     
 </head>
 <body>
-   <?php echo $helper->url(); ?>
+   <?php require 'header.php'; ?>
+   <?//php include $content ?>
+ 
 </body>
 </html>
