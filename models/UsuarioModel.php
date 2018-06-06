@@ -4,18 +4,20 @@ class UsuarioModel
 	private $id;
 	private $nombre;
 	private $apellido;
-	private $usuario;
+    private $usuario;
+    private $email;
 	private $password;
 	private $token;
 	private $estado;
 
 
-	public function __construct($id, $nombre, $apellido, $usuario, $password, $token, $estado)
+	public function __construct($id, $nombre, $apellido, $usuario,$email, $password, $token, $estado)
 	{
 		$this->id = $id;
 		$this->nombre = $nombre;
 		$this->apellido = $apellido;
-		$this->usuario = $usuario;
+        $this->usuario = $usuario;
+        $this->email = $email;
 		$this->password = $password;
 		$this->token = $token;
 		$this->estado = $estado;
@@ -149,6 +151,16 @@ class UsuarioModel
         return $this->estado;
     }
 
+     /**
+     * @return mixed
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    
+
     /**
      * @param mixed $estado
      *
@@ -157,6 +169,18 @@ class UsuarioModel
     public function setEstado($estado)
     {
         $this->estado = $estado;
+
+        return $this;
+    }
+
+        /**
+     * @param mixed $email
+     *
+     * @return self
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
 
         return $this;
     }

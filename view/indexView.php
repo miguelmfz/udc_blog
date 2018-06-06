@@ -9,11 +9,17 @@
     <link rel="stylesheet" href="./global/css/bootstrap.min.css">    
     <script src="./global/js/jquery.js"></script>
     <script src="./global/js/bootstrap.bundle.min.js"></script>
-    
 </head>
 <body>
    <?php require 'header.php'; ?>
-   <?//php include $content ?>
+   <?php require 'banner.php'; ?>
+   <?php include $content ?>
  
 </body>
+   
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+    
 </html>
