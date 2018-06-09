@@ -16,21 +16,26 @@
         }
         public function resultSet($query){
             $rs=null;
-            if($query->num_rows>1){
-                while($row=$query->fetch_object()){
-
-                    $rs[]=$row;
-                }
+            if($query->num_rows>0){
+               
             }else{
                 if($row=$query->fetch_object()){
                     $rs=$row;
+                    foreach ($rs as $key) {
+                        var_dump($rs);
+                    }
+                    
                 }
             }
             return $rs;
         }
         public function getAll(){
             $query=$this->db->query("SELECT * FROM $this->table ORDER BY id DESC");
-            return $this->resultSet($query);
+             while($row=$query->fetch_object()){
+
+                    $rs[]=$row;
+                }
+            return $rs;
         }
         public function getById($id){
             $query=$this->db->query("SELECT * FROM $this->tabla WHERE id='$id'");

@@ -13,7 +13,7 @@
 <body>
    <?php require 'header.php'; ?>
    <?php require 'banner.php'; ?>
-   <?php include $content ?>
+   <?php require $content ?>
  
 </body>
    
