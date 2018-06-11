@@ -53,5 +53,6 @@
             $query=$this->db->query("DELETE FROM $this->table where $column='$value'");
             return query;
         }
+        
     }
 ?>

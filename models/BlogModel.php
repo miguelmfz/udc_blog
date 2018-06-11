@@ -211,8 +211,25 @@ class BlogModel extends Model
                         '$this->idUsuario',
                         '$this->idCategoria');";
         $save=$this->db()->query($query);
+        return $query;     
+    }
+
+    public function getBlogIndex(){
+        $sql='SELECT b.id,u.user,u.img_perfil,b.titulo,c.nombre,b.fechaPublicacion,b.intro FROM blog b 
+        INNER JOIN categorias c on (c.id=b.idCategoria) 
+        INNER JOIN usuarios u on (u.id=b.idUsuario) 
+        WHERE b.`publicar`="S"';
+        $query=$this->execute($sql);
         return $query;
-                        
+    }
+    public function getBlog($id){
+        $sql="SELECT b.id,u.user,u.nombre as name,u.apellido,b.contenido,u.img_perfil,b.titulo,c.nombre,b.fechaPublicacion,b.intro FROM blog b 
+        INNER JOIN categorias c on (c.id=b.idCategoria) 
+        INNER JOIN usuarios u on (u.id=b.idUsuario) 
+        WHERE b.publicar='S' and b.id='$id' ";
+        $query=$this->execute($sql);
+     
+        return $query;
     }
 }
 

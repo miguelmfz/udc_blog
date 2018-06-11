@@ -12,7 +12,6 @@
 </head>
 <body>
    <?php require 'header.php'; ?>
-   <?php require 'banner.php'; ?>
    <?php require $content ?>
  
 </body>
